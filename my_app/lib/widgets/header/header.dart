@@ -12,6 +12,11 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Header");
+    return const Text.rich(
+      TextSpan(
+        text: "Header",
+        style: TextStyle(color: Color(0xFFE2E8F0)),
+      ),
+    );
   }
 }

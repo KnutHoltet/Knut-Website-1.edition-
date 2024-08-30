@@ -7,16 +7,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Expanded(
-          child: Header(),
-        ),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
 
-        Expanded(
-          child: Content(),
-        ),
-      ],
+        children: [
+          Expanded(
+            child: Header(),
+          ),
+
+          Expanded(
+            child: Content(),
+          ),
+        ],
+      ),
     );
   }
 }

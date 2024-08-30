@@ -5,6 +5,11 @@ class Content extends StatelessWidget {
 
   @override
   Widget build(BuildContext context)  {
-    return const Text("Content");
+    return const Text.rich(
+      TextSpan(
+        text: "Body",
+        style: TextStyle(color: Color(0xFFE2E8F0)),
+      )
+    );
   }
 }
