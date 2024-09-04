@@ -12,11 +12,33 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text.rich(
-      TextSpan(
-        text: "Header",
-        style: TextStyle(color: Color(0xFFE2E8F0)),
-      ),
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text.rich(
+          TextSpan(
+            text: "Knut Holtet",
+            style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 36),
+          ),
+        ),
+
+        Text.rich(
+          TextSpan(
+            text: "desc",
+            style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 24)
+
+          )
+        ),
+
+        Text.rich(
+            TextSpan(
+                text: "noe tekst fr",
+                style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 12)
+
+            )
+        ),
+      ],
     );
   }
 }

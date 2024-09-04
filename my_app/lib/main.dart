@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/widgets/header/header.dart';
 import 'package:my_app/widgets/body/body.dart';
+import 'package:catppuccin_flutter/catppuccin_flutter.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Knut website',
       theme: ThemeData(
         // This is the theme of your application.
 
@@ -38,13 +40,15 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  Flavor flavor = catppuccin.mocha;
+
   @override
   Widget build(BuildContext context) {
 
-    return const Scaffold(
-      backgroundColor: Color(0xFF10142C),
+    return Scaffold(
+      backgroundColor: flavor.base,
 
-      body: HomeScreen(),
+      body: const HomeScreen(),
 
     );
   }
