@@ -6,7 +6,7 @@ import 'package:my_app/widgets/body/experience/experience.dart';
 import 'package:my_app/widgets/body/projects/projects.dart';
 
 
-final List<Widget> wid = <Widget> [const About(), const Experience()];
+final List<Widget> entries = <Widget> [const About(), const Experience(), const Projects()];
 
 class Content extends StatelessWidget {
   const Content({super.key});
@@ -15,22 +15,16 @@ class Content extends StatelessWidget {
   Widget build(BuildContext context)  {
     // ListView.seperated and then About - Expericence - Projects
 
-    return ListView(
+    return ListView.separated(
       padding: const EdgeInsets.all(8),
-      children: <Widget>[
-        const About(),
+      itemCount: entries.length,
+      itemBuilder: (BuildContext context, int index) {
+        return entries[index];
+      },
 
-        Container(
-          height: 50,
-          color: Colors.amber[500],
-          child: const Center(child: Text('Entry B')),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber[100],
-          child: const Center(child: Text('Entry C')),
-        ),
-      ],
+      separatorBuilder: (BuildContext context, int index) => const Padding(
+        padding: EdgeInsets.only(bottom: 128),
+      ),
     );
   }
 }
