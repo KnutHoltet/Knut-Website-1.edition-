@@ -1,4 +1,7 @@
+import 'package:catppuccin_flutter/catppuccin_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 
 
@@ -6,38 +9,56 @@ import 'package:flutter/material.dart';
   - Needs to be of type Widget to fit in the body of the scaffold
  */
 
+Flavor flavor = catppuccin.mocha;
+
 
 class Header extends StatelessWidget {
   const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text.rich(
-          TextSpan(
-            text: "Knut Holtet",
-            style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 36),
+        GradientText(
+          "Knut Holtet",
+          style: GoogleFonts.jetBrainsMono(
+            textStyle: const TextStyle(
+              fontSize: 45,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          colors: [
+            flavor.peach,
+            flavor.maroon,
+            flavor.mauve,
+          ],
         ),
 
-        Text.rich(
-          TextSpan(
-            text: "desc",
-            style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 24)
-
-          )
+        GradientText(
+          "Utvikler og Designer",
+          style: GoogleFonts.jetBrainsMono(
+            textStyle: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold
+            ),
+          ),
+          colors: [
+            flavor.mauve,
+            flavor.pink
+          ],
         ),
 
-        Text.rich(
-            TextSpan(
-                text: "noe tekst fr",
-                style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 12)
-
+        Text(
+          "Tredjeårs student på Institutt for Informatikk i Oslo.\nVim-nyter, UI/UX forkjemper, liker å programmere\nog er sport-entusiast samt engasjert tilskuer.",
+          style: GoogleFonts.jetBrainsMono(
+            textStyle: TextStyle(
+              color: flavor.text
             )
-        ),
+          ),
+        )
+
       ],
     );
   }

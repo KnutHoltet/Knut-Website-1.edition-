@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/widgets/header/header.dart';
 import 'package:my_app/widgets/body/body.dart';
 import 'package:catppuccin_flutter/catppuccin_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 void main() {
