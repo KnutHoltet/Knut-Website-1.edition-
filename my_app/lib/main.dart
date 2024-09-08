@@ -46,6 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    /* TODO
+    *   Legg til footer
+    *
+    * */
+
     return Scaffold(
       backgroundColor: flavor.base,
 

@@ -5,6 +5,7 @@ import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 
 
+
 /* TODO:
   - Needs to be of type Widget to fit in the body of the scaffold
  */
@@ -57,7 +58,10 @@ class Header extends StatelessWidget {
               color: flavor.text
             )
           ),
-        )
+        ),
+
+
+
 
       ],
     );

@@ -45,7 +45,7 @@ class About extends StatelessWidget {
           ),
 
           TextSpan(
-            text: "\n\nNote* - nettsiden er skrevet i Flutter, (ish en ukes erfaring, as of 4. september). Men ville lære meg noe nytt, og egne nettsider er obligatorisk nå om dagen (jobbsøkningstid for karrieredager osv!)! For mer info om dette sjekk footer! Altså kan du se på nettsiden som en glorifisert CV / visittkort.",
+            text: "\n\nNote* - nettsiden er skrevet ved hjelp av Flutter, (ish en ukes erfaring, as of 4. september). Men ville lære meg noe nytt, og egne nettsider er obligatorisk nå om dagen (jobbsøkningstid for karrieredager osv!)! For mer info om dette sjekk footer! Altså kan du se på nettsiden som en glorifisert CV / visittkort.",
             style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(color: flavor.text)
             ),
