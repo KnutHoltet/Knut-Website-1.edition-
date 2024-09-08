@@ -12,9 +12,12 @@ class Experience extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // Flavor flavor = catppuccin.mocha;
-    // return const Cards("", "", "", [""]);
-    return const MouseRegionState("datetest");
+    /* Dato - Tittel - Beskrivelse - Ferdigheter */
+    return const Column(
+      children: [
+        MouseRegionState("2022 — NÅ", "Bachelor - Informatikk: Design bruk, interaksjon, UiO", "I tillegg til design kurs, har jeg tatt ekstra emner i programmering.", ["Kotlin", "Python", "Java", "Jetpack Compose", "Relasjonsdatabaser (SQL)", "Algoritmer"]),
+        MouseRegionState("2021 — 2022", "Årsstudium - Anvendt Datateknologi, OsloMet", "Her fikk jeg hands on praktisk prøve meg på, som navnet sier, å anvende datateknologi.", ["HTML/CSS", "Javascript", "DataWiz", "Webhosting", "Prototyping"]) ],
+    );
   }
 }
 

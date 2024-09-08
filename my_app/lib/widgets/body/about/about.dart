@@ -38,7 +38,14 @@ class About extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: "\n\nNår jeg ikke sitter foran skjermen, kan du enten finne meg på hjemmekamper til 08 (Sarpsborg 08, verdens beste fotballag), ute på tur (ta kontakt om du vil linkes på Strava), eller i lag med godtfolk.",
+            text: "\n\nNår jeg ikke sitter foran skjermen, kan du enten finne meg på hjemmekamper til 08 (Sarpsborg 08, verdens beste fotballag), ute på tur (ta kontakt om du vil linkes på Strava), eller i sosiale omgivelser.",
+            style: GoogleFonts.jetBrainsMono(
+                textStyle: TextStyle(color: flavor.text)
+            ),
+          ),
+
+          TextSpan(
+            text: "\n\nNote* - nettsiden er skrevet i Flutter, (ish en ukes erfaring, as of 4. september). Men ville lære meg noe nytt, og egne nettsider er obligatorisk nå om dagen (jobbsøkningstid for karrieredager osv!)! For mer info om dette sjekk footer! Altså kan du se på nettsiden som en glorifisert CV / visittkort.",
             style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(color: flavor.text)
             ),
