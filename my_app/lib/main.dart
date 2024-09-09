@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Knut Holtet website'),
     );
   }
 }
@@ -55,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: flavor.base,
 
       body: const HomeScreen(),
+
 
     );
   }
