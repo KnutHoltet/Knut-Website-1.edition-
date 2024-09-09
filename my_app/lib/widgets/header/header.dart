@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 
@@ -19,6 +20,22 @@ const String githubString = '''
 const String linkedInString = '''
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
 ''';
+
+final Uri _url = Uri.parse('https://github.com/KnutHoltet');
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
+  }
+}
+
+final Uri _url2 = Uri.parse('https://www.linkedin.com/in/knut-holtet-a22b0b1b8/');
+
+Future<void> _launchUrl2() async {
+  if (!await launchUrl(_url2)) {
+    throw Exception('Could not launch $_url');
+  }
+}
 
 
 class Header extends StatelessWidget {
@@ -65,39 +82,105 @@ class Header extends StatelessWidget {
           "Tredjeårs student på Institutt for Informatikk i Oslo.\nVim-nyter, UI/UX forkjemper, liker å programmere\nog er sport-entusiast samt engasjert tilskuer.",
           style: GoogleFonts.jetBrainsMono(
             textStyle: TextStyle(
-              color: flavor.text
+              color: flavor.subtext1
             )
           ),
         ),
 
-        Row(
-          children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 48),
+          child: Row(
+            children: [
 
-            Padding(
-              padding: const EdgeInsets.only(top: 32.0, right: 32),
-              child: SvgPicture.string(
-                githubString,
-                color: flavor.rosewater,
-                width: 60,
-                height: 60,
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Container(
+                  height: 44.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                      colors: [
+                        flavor.pink,
+                        flavor.mauve,
+                        flavor.sapphire
+                      ]
+                    )
+                  ),
+                  child: ElevatedButton(
+                    onPressed: _launchUrl,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: SvgPicture.string(
+                            githubString,
+                            color: flavor.crust,
 
+                          ),
+                        ),
+                        Text(
+                          "Github",
+                          style: GoogleFonts.jetBrainsMono(
+                            textStyle: TextStyle(
+                              color: flavor.crust,
+                              fontWeight: FontWeight.bold
+                            )
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.only(top: 32.0),
-              child: SvgPicture.string(
-                linkedInString,
-                color: flavor.rosewater,
-                width: 60,
-                height: 60,
+              Container(
+                height: 44.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: LinearGradient(
+                        colors: [
+                          flavor.green,
+                          flavor.yellow
+                        ]
+                    )
+                ),
+                child: ElevatedButton(
+                  onPressed: _launchUrl2,
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      shadowColor: Colors.transparent
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: SvgPicture.string(
+                          linkedInString,
+                          color: flavor.crust,
 
+                        ),
+                      ),
+                      Text(
+                        "LinkedIn",
+                        style: GoogleFonts.jetBrainsMono(
+                            textStyle: TextStyle(
+                                color: flavor.crust,
+                                fontWeight: FontWeight.bold
+                            )
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
-            ),
 
-          ],
+            ],
+          ),
         ),
-
 
 
 
