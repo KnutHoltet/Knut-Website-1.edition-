@@ -49,6 +49,31 @@ class About extends StatelessWidget {
             style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(color: flavor.text)
             ),
+
+
+            /* TODO :
+            *   se på om du kan gjøre noe kult med about teksten,
+            *   kanskje gradiant? kanskje noe animaasjonsdritt
+            *
+            *
+            * */
+            /*
+
+          GradientText(
+            "Utvikler og Designer",
+            style: GoogleFonts.jetBrainsMono(
+              textStyle: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            colors: [
+              flavor.mauve,
+              flavor.pink
+            ],
+          ),
+
+             */
           ),
         ],
       ),

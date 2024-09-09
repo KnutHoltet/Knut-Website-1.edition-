@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
+/* TODO
+*
+*  Fiks pixel overflowing issue på cards
+*
+*
+* */
 
 class MouseRegionState extends StatefulWidget {
   const MouseRegionState(this.toDate, this.titel, this.description, this.skills, {super.key});
